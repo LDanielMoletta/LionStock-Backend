@@ -2,10 +2,12 @@
   "name": "lionstock-backend",
   "version": "1.0.0",
   "description": "LionStock backend API for inventory management.",
-  "main": "server.js",
+  "main": "dist/server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node dist/server.js",
+    "dev": "tsx watch server.ts",
+    "build": "tsc",
+    "seed:admin": "tsx src/utils/seedAdmin.ts"
   },
   "keywords": [
     "lionstock",
@@ -26,6 +28,13 @@
     "mongoose": "^7.6.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "@types/bcrypt": "^6.0.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^26.2.0",
+    "nodemon": "^3.0.1",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
   }
 }
