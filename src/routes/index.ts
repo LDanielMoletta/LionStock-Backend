@@ -6,6 +6,7 @@ import categoryRoutes from './category.routes';
 import supplierRoutes from './supplier.routes';
 import productRoutes from './product.routes';
 import movementRoutes from './movement.routes';
+import sumRoutes from './sum.routes';
 
 const router = Router();
 
@@ -24,5 +25,6 @@ router.use('/api', categoryRoutes);
 router.use('/api', supplierRoutes);
 router.use('/api', productRoutes);
 router.use('/api', movementRoutes);
+router.use('/api', sumRoutes);
 
 export default router;
